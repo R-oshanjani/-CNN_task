@@ -1,0 +1,33 @@
+Final Test Accuracy
+
+The CNN model was evaluated on the test dataset after training. The model achieved approximately:
+
+84.20% Test Accuracy
+
+The model demonstrated stable learning and good generalization performance on unseen images from the CIFAR-10 dataset.
+
+Model Architecture Details
+
+The CNN model was implemented from scratch using multiple convolution, pooling, normalization, and dropout layers for image classification.
+
+Layer Type	               Purpose
+Conv2D	                  Extract image features such as edges and textures
+BatchNormalization	      Stabilize and speed up training
+MaxPooling2D	          Reduce feature map dimensions
+Dropout                   Reduce overfitting
+Flatten	                  Convert feature maps into a vector
+Dense Layer	              Learn complex patterns
+Softmax Output Layer	  Perform multi-class classification
+
+
+CNN Architecture Flow
+
+Input Image→ Convolution Layers → Pooling Layers →Flatten Layer → Dense Layer → Softmax Output
+
+Explanation of Approach
+
+In this project, a Convolutional Neural Network (CNN) was built from scratch using the CIFAR-10 dataset for multi-class image classification. The dataset contains 10 different image categories, and the images were normalized by dividing the pixel values by 255 to make the training process more stable and efficient. The class labels were converted into categorical format using one-hot encoding to ensure proper tensor shape handling during model training.
+
+The CNN architecture was created using convolution layers to extract image features, batch normalization layers to improve training stability, max pooling layers to reduce image dimensions, and dropout layers to reduce overfitting. After feature extraction, flatten and dense layers were used for classification. ReLU activation function was applied in the hidden layers, while Softmax activation was used in the output layer to classify the images into 10 classes.
+
+The model was trained using the Adam optimizer and categorical crossentropy loss function. Early stopping and dropout techniques were used to improve generalization performance and prevent overfitting. Finally, the model was evaluated on the test dataset and achieved good classification accuracy while keeping the architecture simple and efficient without using any pretrained models.
